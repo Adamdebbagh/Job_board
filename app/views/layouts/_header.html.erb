@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Job Board</a>
+      <%= link_to "Job Board", root_path, class:"navbar-brand" %>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#">Log in</a></li>
@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav pull-right">
         <li class="active"><a href="#">Employer<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Candidate</a></li>
+        <li><%= link_to "Candidate", candidates_path %></li>
 
       </ul>
 

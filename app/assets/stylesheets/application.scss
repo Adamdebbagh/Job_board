@@ -11,7 +11,8 @@
  * file per style scope.
  *
  * require_tree .
- * require_self
+ *= require_self
+ *= require main
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -255,3 +256,4 @@ body {
 .footer-bottom p.pull-left {
   padding-top: 6px;
 }
+
