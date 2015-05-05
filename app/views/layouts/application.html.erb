@@ -9,12 +9,7 @@
 <body>
     <div class="container">
         <%= render 'layouts/header' %>
-        <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %> alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <%= value %>
-          </div>
-        <% end %>
+        <%= render 'layouts/flash_messages' %>
         <%= yield %>
         <%= render 'layouts/footer'%>
     </div>
