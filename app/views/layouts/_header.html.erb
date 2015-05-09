@@ -16,11 +16,9 @@
       <ul class="nav navbar-nav navbar-right">
 
 
-        <li class="active"><a href="#">Employer<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Employer<span class="sr-only">(current)</span></a></li>
         <li><%= link_to "Candidate", candidates_path %></li>
-        <li><a href="#">Employee</a></li>
-        <li><a href="#">Employer</a></li>
-        <li>
+        <li class="active">
           <% if current_user %>
             <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
             <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
