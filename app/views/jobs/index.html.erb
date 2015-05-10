@@ -1,0 +1,15 @@
+<div class="container">
+<br>
+    <% Category.all.each do |category| %>
+      <div class="">
+      <%= link_to category.name, jobs_path(category: category.name) %>
+    <% end %>
+   </div>
+  <% @jobs.each do |job| %>
+    <div>
+        <h2><%= link_to job.title, job %></h2>
+        <p><%= job.company %></p>
+    </div>
+  <% end %>
+</div>
+<%= link_to 'New Job', new_job_path, class: 'btn btn-sm btn-default' %>

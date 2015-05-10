@@ -9,14 +9,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Job Board</a>
+      <%= link_to "Job Board", root_path,class:"navbar-brand" %>
+
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse-main">
       <ul class="nav navbar-nav navbar-right">
 
+        <li><%= link_to "  Jobs  ", jobs_path %></li>
 
-        <li><a href="#">Employer<span class="sr-only">(current)</span></a></li>
         <li><%= link_to "Candidate", candidates_path %></li>
         <li class="active">
           <% if current_user %>
