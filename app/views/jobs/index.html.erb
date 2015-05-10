@@ -1,15 +1,70 @@
 <div class="container">
 <br>
     <% Category.all.each do |category| %>
-      <div class="">
-      <%= link_to category.name, jobs_path(category: category.name) %>
-    <% end %>
-   </div>
-  <% @jobs.each do |job| %>
-    <div>
-        <h2><%= link_to job.title, job %></h2>
-        <p><%= job.company %></p>
+    <div class="btn-group">
+      <%= link_to category.name, jobs_path(category: category.name),class: 'btn btn-default' %>
     </div>
-  <% end %>
-</div>
-<%= link_to 'New Job', new_job_path, class: 'btn btn-sm btn-default' %>
+    <% end %>
+    <%= link_to 'New Job', new_job_path ,class: 'btn btn-default pull-right' %>
+<hr>
+<!--center-->
+<div class="col-sm-8">
+  <% @jobs.each do |job| %>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2><%= link_to job.title, job %></h2>
+      <small class="pull-right text-muted">
+        <span class="glyphicon glyphicon-time"></span><%= time_ago_in_words(job.created_at)%> ago</small>
+      </br>
+        <h3 class='text-success'><%= job.company %></h3>
+      <%= truncate("#{job.description}", length: 250, omission: '...') %>
+      <p><%= link_to 'Read More',job, class: 'btn btn-default'  %></p>
+
+
+    </div>
+  </div>
+      <% end %>
+  <hr>
+
+
+
+</div><!--/center-->
+
+<!--right-->
+<div class="col-sm-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">Welcome to Job Board !</div>
+    <div class="panel-body">
+      <p>
+      Where Hiring companies meet Software Professionals.
+      Being a startup & dealing with startups in the Silicon Valley
+      we understand the pain of hiring right folks with right skills.
+      This is the idea behind the Job Board where recruiters can post
+      jobs and the candidates can apply for. Now, it is FREE!
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="panel panel-default">
+    <div class="panel-heading">Featured Companies</div>
+    <div class="panel-body">Content here..</div>
+  </div>
+  <hr>
+  <div class="panel panel-default">
+    <div class="panel-heading">Get Jobs by Email</div>
+    <div class="panel-body">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" value=" Enter You Email..">
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <hr>
+
+</div><!--/right-->
+<hr>
+</div><!--/container-fluid-->
