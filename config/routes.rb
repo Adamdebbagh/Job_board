@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'board#index'
   get 'candidates' => 'candidates#index'
+  resources :jobs
+
 
 
 
