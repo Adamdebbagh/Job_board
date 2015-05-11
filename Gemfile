@@ -23,9 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.4.1'
-
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 #upload images using Paperclip
-gem "paperclip", "~> 4.2"
+gem 'paperclip', '~> 4.2'
 gem 'simple_form', '~> 3.1.0'
 # pagination gems
 gem 'will_paginate', '~> 3.0.7'
