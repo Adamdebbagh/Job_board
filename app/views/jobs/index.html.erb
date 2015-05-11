@@ -15,19 +15,15 @@
       <h2><%= link_to job.title, job %></h2>
       <small class="pull-right text-muted">
         <span class="glyphicon glyphicon-time"></span><%= time_ago_in_words(job.created_at)%> ago</small>
-      </br>
+      <br>
         <h3 class='text-success'><%= job.company %></h3>
       <%= truncate("#{job.description}", length: 250, omission: '...') %>
       <p><%= link_to 'Read More',job, class: 'btn btn-default'  %></p>
-
-
     </div>
   </div>
       <% end %>
   <hr>
-
-
-
+  <%= will_paginate @collection, renderer: BootstrapPagination::Rails,class: 'pull-left' %>
 </div><!--/center-->
 
 <!--right-->
