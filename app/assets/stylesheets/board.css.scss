@@ -1,5 +1,8 @@
 
+.main-page-content.board {
 
+
+}
 /* padded section */
 .pad-section {
   padding: 50px 0;
@@ -34,8 +37,8 @@
   -o-background-size: cover;
   background-size: cover;
 }
-
-#about {
+.home {
+  padding-top: 150px;
 }
 
 #services {
@@ -69,9 +72,7 @@
   opacity: 0.85;
 }
 
-#google_map {
-  height: 500px;
-}
+
 
 footer {
   padding: 20px 0;
