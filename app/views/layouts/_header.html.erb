@@ -16,10 +16,10 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-main">
       <ul class="nav navbar-nav navbar-right">
 
-        <li><%= link_to "  Jobs  ", jobs_path %></li>
+        <li class="<%= yield(:jobs)%>"><%= link_to "Jobs", jobs_path %></li>
 
-        <li><%= link_to "Candidate", candidates_path %></li>
-        <li class="active">
+        <li class="<%= yield(:candidates)%>"><%= link_to "Candidates", candidates_path %></li>
+        <li class="<%= yield(:login)%>">
           <% if current_user %>
             <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
             <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
